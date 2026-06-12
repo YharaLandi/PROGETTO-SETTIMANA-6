@@ -1,0 +1,25 @@
+// ============================================================
+// Atelier — _variables.scss
+// Tutte le variabili globali del progetto
+// ============================================================
+
+
+// === Colori brand ===
+
+$nav-bg:          hsl(20, 20%, 15%);
+$footer-bg:       hsl(20, 20%, 15%);
+$brand-dark: color.adjust(hsl(20, 30%, 35%), $lightness: -8%);
+$brand-dark:      darken(hsl(20, 30%, 35%), 8%);
+$text-light:      hsl(40, 30%, 90%);
+$brand-light:     hsl(20, 30%, 45%);
+$text-muted-alt:  hsl(40, 30%, 90%);
+
+// === Bordi e raggi ===
+
+$radius-base:     8px;
+$radius-card:     12px;
+
+
+// === Transizioni ===
+
+$transition-base: 0.25s ease;

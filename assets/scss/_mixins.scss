@@ -1,0 +1,30 @@
+// ============================================================
+// Atelier — _mixins.scss
+// ============================================================
+
+@use 'variables' as *;
+
+
+@mixin card-elevata {
+  border: 1px solid #e8e0dc;
+  border-radius: $radius-card;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: box-shadow $transition-base, transform $transition-base;
+
+  &:hover {
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-3px);
+  }
+}
+
+@mixin section-heading {
+  font-size: 1.75rem;
+  letter-spacing: -0.5px;
+}
+
+@mixin solo-su($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}

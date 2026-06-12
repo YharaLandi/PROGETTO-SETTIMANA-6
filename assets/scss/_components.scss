@@ -1,0 +1,361 @@
+// ============================================================
+// Atelier — _components.scss
+// ============================================================
+
+@use 'variables' as *;
+@use 'mixins' as *;
+
+
+// === Override Bootstrap ===
+
+.bg-brand {
+  background-color: $brand-primary !important;
+}
+
+.btn-brand {
+  background-color: $brand-primary;
+  border-color:     $brand-primary;
+  color: #fff;
+  border-radius: $radius-base;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: background-color $transition-base, border-color $transition-base;
+
+  &:hover,
+  &:focus {
+    background-color: $brand-dark;
+    border-color:     $brand-dark;
+    color: #fff;
+  }
+}
+
+.btn-outline-light {
+  border-radius: $radius-base;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: background-color $transition-base, color $transition-base;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: $brand-primary;
+  box-shadow: 0 0 0 0.2rem rgba(107, 58, 42, 0.2);
+}
+
+
+// === Header ===
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+
+// === Navbar ===
+
+.navbar {
+  padding-top:    0.65rem;
+  padding-bottom: 0.65rem;
+  background-color: $nav-bg !important;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+
+  .navbar-brand {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #fff;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.85);
+    transition: color $transition-base;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.4);
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+  }
+
+  .navbar-collapse {
+    padding-top: 0.5rem;
+
+    @include solo-su(480px) {
+      padding-top: 0;
+    }
+  }
+}
+
+.btn-theme {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.25rem 0.4rem;
+  line-height: 1;
+  transition: transform $transition-base;
+
+  &:hover {
+    transform: rotate(20deg) scale(1.1);
+  }
+}
+
+
+// === Hero ===
+
+.hero {
+  min-height: 80vh;
+
+  &__title {
+    font-size: 1.4rem;
+    line-height: 1.25;
+
+    @include solo-su(480px)  { font-size: 1.75rem; }
+    @include solo-su(768px)  { font-size: 2.2rem; }
+    @include solo-su(1200px) { font-size: 2.8rem; }
+  }
+
+  &__subtitle {
+    font-size: 0.9rem;
+    max-width: 480px;
+    opacity: 0.9;
+    line-height: 1.6;
+
+    @include solo-su(480px) { font-size: 1rem; }
+    @include solo-su(768px) { font-size: 1.05rem; }
+  }
+
+  .btn-cta {
+    font-size: 0.95rem;
+    background-color: transparent;
+    border: 2px solid transparent;
+    color: #fff;
+    transition: background-color $transition-base, border-color $transition-base, color $transition-base;
+
+    &:hover {
+      background-color: $brand-dark;
+      border-color: $brand-dark;
+      color: #fff;
+    }
+  }
+}
+
+
+// === Servizi ===
+
+.servizi {
+  h2 {
+    @include section-heading;
+  }
+}
+
+.card-servizio {
+  @include card-elevata;
+
+  &__icon {
+    font-size: 2.5rem;
+    display: block;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+}
+
+
+// === Lavori ===
+
+.lavori {
+  h2 {
+    @include section-heading;
+  }
+}
+
+.btn-filtro {
+  background-color: transparent;
+  border: 1px solid $brand-primary;
+  color: $brand-primary;
+  border-radius: $radius-base;
+  font-size: 0.88rem;
+  transition: background-color $transition-base, color $transition-base;
+
+  &:hover,
+  &.active {
+    background-color: $brand-primary;
+    color: #fff;
+  }
+}
+
+.card-lavoro {
+  border-radius: $radius-card;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: box-shadow $transition-base, transform $transition-base;
+
+  &:hover {
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-3px);
+  }
+
+  &__img {
+    width: 100%;
+    height: 180px;
+    background-color: $brand-primary;
+    opacity: 0.4;
+  }
+
+  &__body {
+    padding: 1rem;
+  }
+
+  &__cat {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: $brand-primary;
+    font-weight: 600;
+  }
+
+  &__titolo {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0.25rem 0;
+  }
+
+  &__anno {
+    font-size: 0.85rem;
+    color: #888;
+    margin: 0;
+  }
+}
+
+
+// === Contatti ===
+
+.contatti {
+  h2 {
+    @include section-heading;
+  }
+
+  .form-label {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #555;
+  }
+
+  .form-control,
+  .form-select {
+    border-radius: $radius-base;
+    border-color: #d0c8c4;
+    font-size: 0.93rem;
+    resize: none;
+  }
+}
+
+
+// === Footer ===
+
+.footer {
+  background-color: $footer-bg !important;
+
+  &__muted {
+    color: $text-muted-alt;
+  }
+
+  &__link {
+    color: $text-muted-alt;
+    text-decoration: none;
+    transition: color $transition-base;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &__divider {
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+
+  p.fw-bold {
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    color: #fff;
+  }
+}
+
+
+// === Dark mode ===
+
+body.dark {
+  background-color: hsl(20, 10%, 10%);
+  color: hsl(40, 30%, 90%);
+
+body.dark .contatti .form-control::placeholder,
+body.dark .contatti .form-select::placeholder,
+body.dark .contatti textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+  opacity: 1 !important;
+}
+  .card-servizio {
+    background-color: hsl(20, 10%, 15%);
+    border-color: hsl(20, 10%, 20%);
+    color: hsl(40, 30%, 90%);
+
+    .text-muted {
+      color: hsl(40, 20%, 70%) !important;
+    }
+  }
+
+  .card-lavoro {
+    background-color: hsl(20, 10%, 15%);
+
+    &__anno {
+      color: hsl(40, 20%, 60%);
+    }
+  }
+
+  .contatti {
+    background-color: hsl(20, 10%, 12%) !important;
+
+    .form-label {
+      color: hsl(40, 30%, 80%);
+    }
+
+    .form-control,
+    .form-select {
+      background-color: hsl(20, 10%, 18%);
+      border-color: hsl(20, 10%, 25%);
+      color: hsl(40, 30%, 90%);}
+
+
+  }
+}
+  .lavori {
+    background-color: hsl(20, 10%, 11%) !important;
+
+    .text-muted {
+      color: hsl(40, 20%, 70%) !important;
+    }
+  }
+
+  .modal-content {
+    background-color: hsl(20, 10%, 15%);
+    color: hsl(40, 30%, 90%);
+
+    .text-muted {
+      color: hsl(40, 20%, 70%) !important;
+    }
+  }

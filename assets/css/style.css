@@ -1,0 +1,310 @@
+.bg-brand {
+  background-color: hsl(20, 30%, 35%) !important;
+}
+
+.btn-brand {
+  background-color: hsl(20, 30%, 35%);
+  border-color: hsl(20, 30%, 35%);
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+.btn-brand:hover, .btn-brand:focus {
+  background-color: hsl(20, 30%, 27%);
+  border-color: hsl(20, 30%, 27%);
+  color: #fff;
+}
+
+.btn-outline-light {
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: hsl(20, 30%, 35%);
+  box-shadow: 0 0 0 0.2rem rgba(107, 58, 42, 0.2);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+.navbar {
+  padding-top: 0.65rem;
+  padding-bottom: 0.65rem;
+  background-color: hsl(20, 20%, 15%) !important;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+.navbar .navbar-brand {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+.navbar .navbar-brand:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+.navbar .nav-link {
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.85);
+  transition: color 0.25s ease;
+}
+.navbar .nav-link:hover {
+  color: #fff;
+}
+.navbar .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+.navbar .navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.navbar .navbar-collapse {
+  padding-top: 0.5rem;
+}
+@media (min-width: 480px) {
+  .navbar .navbar-collapse {
+    padding-top: 0;
+  }
+}
+
+.btn-theme {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.25rem 0.4rem;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+.btn-theme:hover {
+  transform: rotate(20deg) scale(1.1);
+}
+
+.hero {
+  min-height: 80vh;
+}
+.hero__title {
+  font-size: 1.4rem;
+  line-height: 1.25;
+}
+@media (min-width: 480px) {
+  .hero__title {
+    font-size: 1.75rem;
+  }
+}
+@media (min-width: 768px) {
+  .hero__title {
+    font-size: 2.2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .hero__title {
+    font-size: 2.8rem;
+  }
+}
+.hero__subtitle {
+  font-size: 0.9rem;
+  max-width: 480px;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+@media (min-width: 480px) {
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .hero__subtitle {
+    font-size: 1.05rem;
+  }
+}
+.hero .btn-cta {
+  font-size: 0.95rem;
+  background-color: transparent;
+  border: 2px solid transparent;
+  color: #fff;
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+.hero .btn-cta:hover {
+  background-color: hsl(20, 30%, 27%);
+  border-color: hsl(20, 30%, 27%);
+  color: #fff;
+}
+
+.servizi h2 {
+  font-size: 1.75rem;
+  letter-spacing: -0.5px;
+}
+
+.card-servizio {
+  border: 1px solid #e8e0dc;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.card-servizio:hover {
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+}
+.card-servizio__icon {
+  font-size: 2.5rem;
+  display: block;
+}
+.card-servizio h3 {
+  font-size: 1rem;
+}
+
+.lavori h2 {
+  font-size: 1.75rem;
+  letter-spacing: -0.5px;
+}
+
+.btn-filtro {
+  background-color: transparent;
+  border: 1px solid hsl(20, 30%, 35%);
+  color: hsl(20, 30%, 35%);
+  border-radius: 8px;
+  font-size: 0.88rem;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+.btn-filtro:hover, .btn-filtro.active {
+  background-color: hsl(20, 30%, 35%);
+  color: #fff;
+}
+
+.card-lavoro {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.card-lavoro:hover {
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+}
+.card-lavoro__img {
+  width: 100%;
+  height: 180px;
+  background-color: hsl(20, 30%, 35%);
+  opacity: 0.4;
+}
+.card-lavoro__body {
+  padding: 1rem;
+}
+.card-lavoro__cat {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: hsl(20, 30%, 35%);
+  font-weight: 600;
+}
+.card-lavoro__titolo {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0.25rem 0;
+}
+.card-lavoro__anno {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0;
+}
+
+.contatti h2 {
+  font-size: 1.75rem;
+  letter-spacing: -0.5px;
+}
+.contatti .form-label {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #555;
+}
+.contatti .form-control,
+.contatti .form-select {
+  border-radius: 8px;
+  border-color: #d0c8c4;
+  font-size: 0.93rem;
+}
+
+.footer {
+  background-color: hsl(20, 20%, 15%) !important;
+}
+.footer__muted {
+  color: hsl(40, 30%, 90%);
+}
+.footer__link {
+  color: hsl(40, 30%, 90%);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+.footer__link:hover {
+  color: #fff;
+}
+.footer__divider {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+.footer p.fw-bold {
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+body.dark {
+  background-color: hsl(20, 10%, 10%);
+  color: hsl(40, 30%, 90%);
+}
+body.dark .card-servizio {
+  background-color: hsl(20, 10%, 15%);
+  border-color: hsl(20, 10%, 20%);
+  color: hsl(40, 30%, 90%);
+}
+body.dark .card-servizio .text-muted {
+  color: hsl(40, 20%, 70%) !important;
+}
+body.dark .card-lavoro {
+  background-color: hsl(20, 10%, 15%);
+}
+body.dark .card-lavoro__anno {
+  color: hsl(40, 20%, 60%);
+}
+body.dark .contatti {
+  background-color: hsl(20, 10%, 12%) !important;
+}
+body.dark .contatti .form-label {
+  color: hsl(40, 30%, 80%);
+}
+body.dark .contatti .form-control,
+body.dark .contatti .form-select {
+  background-color: hsl(20, 10%, 18%);
+  border-color: hsl(20, 10%, 25%);
+  color: hsl(40, 30%, 90%);
+}
+body.dark .lavori {
+  background-color: hsl(20, 10%, 11%) !important;
+}
+body.dark .lavori .text-muted {
+  color: hsl(40, 20%, 70%) !important;
+}
+body.dark .modal-content {
+  background-color: hsl(20, 10%, 15%);
+  color: hsl(40, 30%, 90%);
+}
+body.dark .modal-content .text-muted {
+  color: hsl(40, 20%, 70%) !important;
+}
+
+/*# sourceMappingURL=style.css.map */
+body.dark .contatti .form-control::placeholder,
+body.dark .contatti .form-select::placeholder,
+body.dark .contatti textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+  opacity: 1 !important;
+}
